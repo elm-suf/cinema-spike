@@ -22,6 +22,7 @@ public class CinemaResourceTests {
     @Test
     public void save_entity_in_repo() {
         var cinema = createEntity();
+
         var saved = repo.save(cinema);
 
         assertNotNull(cinema);

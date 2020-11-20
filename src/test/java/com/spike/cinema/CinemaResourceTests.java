@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import com.spike.cinema.cinema.Cinema;
+import com.spike.cinema.model.Cinema;
 import com.spike.cinema.cinema.CinemaRepo;
 
 import org.junit.jupiter.api.DisplayName;

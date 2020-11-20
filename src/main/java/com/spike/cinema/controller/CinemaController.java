@@ -1,9 +1,9 @@
-package com.spike.cinema.cinema;
+package com.spike.cinema.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
+import com.spike.cinema.cinema.CinemaRepo;
+import com.spike.cinema.model.Cinema;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

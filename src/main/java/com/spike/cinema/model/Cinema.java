@@ -1,14 +1,15 @@
-package com.spike.cinema.cinema;
+package com.spike.cinema.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Data
@@ -16,11 +17,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class Cinema {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String address;
 
+    @JsonManagedReference
+    @OneToMany(mappedBy = "cinema")
+    private List<Hall> halls;
 }

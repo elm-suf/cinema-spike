@@ -21,8 +21,8 @@ public class CinemaResourceTests {
 
     @Test
     public void save_entity_in_repo() {
-        var cinema = createEntity();
-
+        //var cinema = createEntity();
+        var cinema = new Cinema();
         var saved = repo.save(cinema);
 
         assertNotNull(cinema);
@@ -32,7 +32,7 @@ public class CinemaResourceTests {
         assertEquals(repo.count(), 1);
     }
 
-    private Cinema createEntity() {
+    /*private Cinema createEntity() {
         return Cinema.builder().address("via dai dai").name("cinema 1").build();
-    }
+    }*/
 }

@@ -16,10 +16,12 @@ public class Hall {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+
+    @NonNull
     private String name;
 
     @JsonBackReference
-    @ManyToOne()
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name="cinema_id")
     @ToString.Exclude
     private Cinema cinema;

@@ -3,11 +3,10 @@ package com.spike.cinema.model;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.*;
 
+import java.net.Proxy;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,11 +15,16 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ToString
 public class Cinema {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @NonNull
     private String name;
+
+    @NonNull
     private String address;
 
     @JsonManagedReference

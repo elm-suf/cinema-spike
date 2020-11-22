@@ -1,6 +1,5 @@
 package com.spike.cinema.cinema;
 
-import com.spike.cinema.model.Cinema;
 import com.spike.cinema.model.Hall;
 import org.springframework.data.jpa.repository.JpaRepository;
 
